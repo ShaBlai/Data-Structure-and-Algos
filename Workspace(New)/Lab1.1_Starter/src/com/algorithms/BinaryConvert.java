@@ -7,8 +7,18 @@ public class BinaryConvert {
     }
 
     public static int convertFromBinary(String binary){
-        // TODO-Lab1.1: return calculated decimal value converted from String binary
-        return 0;
+
+        int conversion = 1;
+        int result = 0;
+
+        for (int i = binary.length()-1; i>=0; i-- ){
+            System.out.println("i is " + i);
+            if (binary.charAt(i) == '1'){
+                result += conversion;
+            }
+            conversion *= 2;
+        }
+        return result;
     }
 
 }
