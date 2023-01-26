@@ -25,8 +25,12 @@ public class SinglyLinkedListTest {
 
     @Test
     public void deleteFrontPositive() {
-
-         }
+        custList.deleteFront();
+        int expectedCustNo = 67890;
+        LinkedListNode<Customer> head = custList.getHead();
+        int actualCustNo = head.getValue().getCustNo();
+        assertEquals(expectedCustNo, actualCustNo);
+    }
 
     @Test
     public void sizePositive() {
